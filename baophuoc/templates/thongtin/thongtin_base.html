@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block extra_head %}
+<link rel="stylesheet" href="static/styles/thongtin/thongtin-sidebar-script.css">
+<link rel="stylesheet" href="static/styles/thongtin/thongtin.css">
+<noscript><link rel="stylesheet" href="static/styles/thongtin/thongtin-sidebar.css"></noscript>
+<script src="static/scripts/jquery.js"></script>
+<script src="static/scripts/thongtin/thongtin.js"></script>
+{% endblock %}
+{% block head %}
+<div id="left-sidebar">
+    <h3 id="sidebar-header">Thông Tin</h3>
+    <ul id="main-menu">
+        <li class="dropdown"><a href="#">Giới Thiệu</a>
+            <!--{% if gioi_thieu_data %}-->
+            <ul class="sub-menu">
+                <!--{% for data in gioi_thieu_data %}-->
+                <li><a href="/thongtin/gioithieu/{{ data.url_tag }}">{{ data.title }}</a></li>
+                <!--{% endfor %}-->
+            </ul>
+             <!--{% endif %}-->
+        </li>
+        <li><a href="#">Tôn Chỉ</a></li>
+        <li class="dropdown"><a href="#">Thông Báo</a>
+            <!--{% if thong_bao_data %}-->
+            <ul class="sub-menu">
+                <!--{% for data in thong_bao_data %}-->
+                <li><a href="/thongtin/thongbao/{{ data.url_tag }}">{{ data.title }}</a></li>
+                <!--{% endfor %}-->
+            </ul>
+             <!--{% endif %}-->
+        </li>
+        <li><a href="#">Lịch Sinh Hoạt</a></li>
+        <li><a href="#">Liên Lạc</a></li>
+    </ul>
+</div> <!-- end #left-side -->
+{% endblock %}
+
+{% block body_block %}{% endblock %}

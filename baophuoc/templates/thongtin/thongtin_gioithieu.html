@@ -1,0 +1,12 @@
+{% extends 'thongtin/thongtin_base.html' %}
+{% block title %}Giới Thiệu{% endblock %}
+{% block body_block %}
+<!--{% if gioithieu %}-->
+<div id="main-content">   
+    <div class="content-header"><div class="header-icon"></div><h3>Giới Thiệu</h3></div>
+    <h3 class="content-title">{{ gioithieu.title }}</h3>
+    <hr class="seperator">
+    <div class="content">{{ gioithieu.content|safe }}</div>
+</div>
+<!--{% endif %}-->
+{% endblock %}

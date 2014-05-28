@@ -1,0 +1,12 @@
+{% extends 'thongtin/thongtin_base.html' %}
+{% block title %}Thông Báo{% endblock %}
+{% block body_block %}
+<!--{% if thongbao %}-->
+<div id="main-content">
+    <div class="content-header"><div class="header-icon"></div><h3>Thông Báo</h3></div>
+    <h3 class="content-title">{{ thongbao.title }}</h3>
+    <hr class="seperator">
+    <div class="content">{{ thongbao.content|safe }}</div>
+</div>
+<!--{% endif %}-->
+{% endblock %}

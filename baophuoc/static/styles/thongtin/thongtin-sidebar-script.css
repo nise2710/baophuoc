@@ -1,0 +1,60 @@
+/* thongtin-sidebar.css */
+#left-sidebar {
+    background-color: #FFCC33;
+    border: 1px solid #DD8000;
+    border-top: none;
+    float: left;
+    width: 200px;
+}
+
+#left-sidebar h3#sidebar-header {
+    background: url("../../media/images/nav_background.png") repeat-x;
+    /* background-color: #FFA630; */
+    border-bottom: 1px solid #DD8000;
+    border-top: none;
+    color: #EC4100;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+    padding: 10px 0;
+}
+
+#left-sidebar ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#left-sidebar ul li {
+    padding: 10px 0;
+    position: relative;
+}
+
+#left-sidebar ul li:not(:last-child) {
+    border-bottom: 1px dotted #DFA800;
+}
+
+#left-sidebar ul li:hover {
+    background-color: #FFC106;
+}
+
+#left-sidebar ul li a, #main-menu li ul.sub-menu li a  {
+    color: #FF4300;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* submenu */
+ul.sub-menu {
+	background-color: #FFCC33;
+	border: 1px solid #DD8000;
+	display: none;
+	left: 200px;
+	top: -1px;
+	position: absolute;
+	width: 100%
+}
+
+ul.sub-menu li a,
+ul.sub-menu li a:active,
+ul.sub-menu li a:link {
+	display: block;
+}

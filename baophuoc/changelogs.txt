@@ -1,0 +1,23 @@
+BAO PHUOC WEBSITE CHANGELOG
+05-03-2014:
+    - Basic Template for the web
+    - Add database for the 'thongtin' page
+    - Modify/Add the rich text editor for the admin page
+
+05-04-2014:
+    - Fix the 'trangchu' static url bug
+    - Redirect localhost to localhost/trangchu
+    - Fix the encode, changes encoding of IDE to utf-8
+    - Finish the temporary sidebar, add a vertical dropdown menu
+
+05-05-2014:
+    - Add dynamic sub menu to the sidebar which gather information from the db,
+    and create the level 1 menu
+    - Add "url_tag" field to the Content table(db), change ecoding of db to utf-8
+    - Get data(content) from the db and display on the main page of thongtin_gioithieu.html
+    base on the selection (sub menu) of the user
+    
+05-06-2014:
+    - Retrieve and display content in the thongbao page
+    - Change from 'Tiểu Sử' to 'Giới Thiệu'
+    

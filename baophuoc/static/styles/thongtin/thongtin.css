@@ -1,0 +1,49 @@
+#main-content {
+    background-color: #FFDE79;
+    float: right;
+    width: 778px;
+    padding: 0 10px;
+}
+
+.content-header {
+    background: url("../../media/images/nav_background.png") repeat-x;
+    border-bottom: 1px solid #DD8000;
+    height: 42px;
+    width: 798px;
+    margin-left: -10px;
+    position: relative;
+    z-index: 10;
+}
+
+.content-header h3 {
+    color: #EC4100;
+    font-size: 15pt;
+    padding: 8px;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+}
+
+.content-header .header-icon {
+    background-image: url("../../media/images/wheel_3.png");
+    background-size: 25px 25px;
+    height: 25px; width: 25px;
+    margin: 9px 0 0 320px;
+    position: absolute;
+}
+
+.seperator {
+    background-color: #FFC71C;
+    border: 0;
+    height: 1px; width: 600px;
+    margin: 0 auto;
+}
+
+h3.content-title {
+    font-family: serif;
+    font-size: 20pt;
+    padding: 10px;
+}
+
+.content {
+    padding: 15px;
+}
