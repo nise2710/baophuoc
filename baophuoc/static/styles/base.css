@@ -42,7 +42,7 @@ body {
 
 #nav ul li {
     display: inline;
-    padding: 6px 15px 6px 15px;
+    padding: 5px 15px 6px 15px;
     margin: 0 -5px 0 -5px;
 }
 /*
@@ -52,17 +52,16 @@ body {
 */
 #nav ul li a {
     color: #FF4300;
+    font-size: 11pt;
     font-weight: bold;
     text-decoration: none;
 }
 
 #nav ul li:hover {
-    background: url("../../media/images/nav_background2_hover.png") repeat-x;
-    /* background-color: #FFC106; 
-    border: 2px solid #DD8000; */
-    border-radius: 0px;
-    height: 50px;
-    padding: 15px 15px 15px 15px;
+    background: url("../../media/images/nav_background2_hover_1.png") repeat-x;
+    background-color: #FFB733; 
+    border-radius: 3px;
+    padding: 10px 15px 10px 15px;
 }
 /*                                          
 #nav ul li:hover:last-child {
@@ -79,6 +78,83 @@ body {
     margin-top: 0;
 }
 
+.header-icon {
+    height: 14px; width: 14px;
+    padding: 0 3px;
+}
+
+.share {
+    padding: 10px 5px;
+    float: right;
+}
+
+#share-btn {
+    display: inline;
+}
+
+.share-text {
+    font-size: 11pt;
+    font-weight: bold;
+    float: left;
+    padding-right: 2px;
+}
+
 #footer {
     clear: both;
+}
+
+#footer .footer-content {
+    background: url("../../media/images/baophuoc_footer.png") repeat-x;
+    border-top: 1px solid #DD8000; 
+    height: 154px;
+    width: 1000px;
+}
+
+.contact {
+    border-right: 1px dotted #DFA800;
+    width: 230px;
+}
+
+.contact .contact-header {
+    background: url("../../media/images/nav_background.png") repeat-x;
+    border-bottom: 1px solid #DD8000; 
+    text-align: center;
+    height: 43px; width: 230px;
+}
+
+.contact .contact-header h3 {
+    color: #EC4100;
+    font-size: 15pt;
+    padding: 8px;
+    text-shadow: 1px 1px #000000;
+}
+
+.contact ul {
+    font-size: 10pt;
+    list-style-type: none;
+    padding: 3px 20px;
+    margin-left: 5px;
+}
+
+.contact ul li a {
+    color: #B72D00;
+    text-decoration: none;
+}
+
+.contact ul li a:hover {
+    color: #EC4100;
+    text-decoration: underline;
+}
+
+.direction {
+    font-size: 7pt;
+    font-weight: bold;
+}
+
+#footer .copyright {
+    background: url("../../media/images/nav_background.png") repeat-x;
+    border-top: 2px solid #DD8000; 
+    font-size: 10pt;
+    padding: 10px;
+    text-align: center;
 }

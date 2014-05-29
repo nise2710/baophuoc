@@ -11,24 +11,6 @@
     height: 42px;
     width: 798px;
     margin-left: -10px;
-    position: relative;
-    z-index: 10;
-}
-
-.content-header h3 {
-    color: #EC4100;
-    font-size: 15pt;
-    padding: 8px;
-    text-align: center;
-    text-shadow: 1px 1px #000000;
-}
-
-.content-header .header-icon {
-    background-image: url("../../media/images/wheel_3.png");
-    background-size: 25px 25px;
-    height: 25px; width: 25px;
-    margin: 9px 0 0 320px;
-    position: absolute;
 }
 
 .seperator {
@@ -38,10 +20,24 @@
     margin: 0 auto;
 }
 
+
+.content-header h3 {
+    color: #EC4100;
+    font-size: 15pt;
+    padding: 8px;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+}
+
 h3.content-title {
     font-family: serif;
     font-size: 20pt;
     padding: 10px;
+}
+
+.content-title-icon {
+    height: 36px; width: 50px;
+    margin-bottom: -5px;
 }
 
 .content {

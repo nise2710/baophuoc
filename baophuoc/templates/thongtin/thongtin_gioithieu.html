@@ -3,10 +3,12 @@
 {% block body_block %}
 <!--{% if gioithieu %}-->
 <div id="main-content">   
-    <div class="content-header"><div class="header-icon"></div><h3>Giới Thiệu</h3></div>
-    <h3 class="content-title">{{ gioithieu.title }}</h3>
+    <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Giới Thiệu</h3></div>
+    <h3 class="content-title"><img src="media/images/lotus_2.png" class="content-title-icon"/>{{ gioithieu.title }}</h3>
     <hr class="seperator">
     <div class="content">{{ gioithieu.content|safe }}</div>
+    <hr class="seperator">
+    {% include './share_small_btn.html' %}
 </div>
 <!--{% endif %}-->
 {% endblock %}

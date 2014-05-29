@@ -7,9 +7,6 @@
         <link rel="stylesheet" href="static/styles/base.css">
         <script src="static/scripts/jquery.js"></script>
         <script src="static/scripts/base.js"></script>
-        <script type="text/javascript">var switchTo5x=true;</script>
-        <script type="text/javascript" src="static/scripts/share.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "19d99acc-5af4-4058-ba0a-b19e2b7e6137", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
         {% block extra_head %}{% endblock %}
     </head>
     <body>
@@ -36,20 +33,32 @@
             
             <!-- every content will be in here -->
             {% block body_block %}{% endblock %}
-            
-            <div class="share"><span class="share-text">Share:</span>
-                <span class='st_facebook_large' displayText='Facebook'></span>
-                <span class='st_twitter_large' displayText='Tweet'></span>
-                <span class='st_googleplus_large' displayText='Google +'></span>
-                <span class='st_tumblr_large' displayText='Tumblr'></span>
-                <span class='st_wordpress_large' displayText='WordPress'></span>
-                <span class='st_digg_large' displayText='Digg'></span>
-                <span class='st_google_translate_large' displayText='Google Translate'></span>
-                <span class='st_email_large' displayText='Email'></span>
-            </div>
             </div><!-- end #primary -->
-            <div id="footer"><p>Copyright &copy; by Bao Phuoc Temple - 2014</p></div>
+            <div id="footer">
+                <div class="footer-content">
+                    <div class="contact">
+                        <div  class="contact-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Liên Lạc</h3></div>
+                        <hr class="seperator">
+                        <ul>
+                            <li><strong>Chùa Bảo Phước</strong></li>
+                            <li>270 Senter Road</li>
+                            <li>San Jose, CA 95111</li>
+                            <li>United States <a href="https://maps.google.com/?q=270%20Senter%20Road,%20San%20Jose,%20California,%2095111" target="_blank"><span class="direction">[Get Direction]</span></a></li>
+                            <li>Tel: (408) 365-1228</li>
+                            <li>Homepage: <a href="www.baophuoc.org">www.baophuoc.org</a></li>
+                        </ul>
+                    </div><!-- end .contact -->
+                </div> <!-- end .footer-content -->
+                <div class="copyright"><p></p></div>
+            </div>
         </div> <!-- end #container -->
         <div id="right-column"></div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var currentYear = (new Date).getFullYear();
+                var copyright = '&copy; '+currentYear+' Chùa Bảo Phước - Designed by DTT';
+                $('.copyright p').html(copyright); 
+            });
+        </script>
     </body>
 </html>
