@@ -66,6 +66,7 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': DATABASE_PATH,
         'ENGINE': 'django.db.backends.mysql',
+        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'baophuoc',
         'USER': 'root',
         'PASSWORD': '8497702',

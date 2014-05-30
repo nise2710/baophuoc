@@ -1,5 +1,5 @@
 #main-content {
-    background-color: #FFDE79;
+    background-color: #FFFAE8;
     float: right;
     width: 778px;
     padding: 0 10px;
@@ -8,7 +8,7 @@
 .content-header {
     background: url("../../media/images/nav_background.png") repeat-x;
     border-bottom: 1px solid #DD8000;
-    height: 42px;
+    height: 43px;
     width: 798px;
     margin-left: -10px;
 }
@@ -42,4 +42,13 @@ h3.content-title {
 
 .content {
     padding: 15px;
+}
+
+.content ul {
+    padding: 10px;
+}
+
+.content ul li {
+    padding: 10px 0;
+    margin-left: 40px;
 }

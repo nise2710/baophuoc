@@ -1,0 +1,14 @@
+﻿{% extends 'thongtin/thongtin_base.html' %}
+{% block title %}Tôn Chỉ{% endblock %}
+{% block body_block %}
+<!--{% if tonchi %}-->
+<div id="main-content">
+    <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Tôn Chỉ</h3></div>
+    <h3 class="content-title"><img src="media/images/lotus_2.png" class="content-title-icon"/>{{ tonchi.title }}</h3>
+    <hr class="seperator">
+    <div class="content">{{ tonchi.content|safe }}</div>
+    <hr class="seperator">
+    {% include './share_small_btn.html' %}
+</div>
+<!--{% endif %}-->
+{% endblock %}
