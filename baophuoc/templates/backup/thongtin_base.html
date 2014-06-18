@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block extra_head %}
+<link rel="stylesheet" href="static/styles/thongtin/thongtin-sidebar-script.css">
+<link rel="stylesheet" href="static/styles/thongtin/thongtin.css">
+<noscript><link rel="stylesheet" href="static/styles/thongtin/thongtin-sidebar.css"></noscript>
+<script src="static/scripts/jquery.js"></script>
+<script src="static/scripts/thongtin/thongtin.js"></script>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-538668bf7b256a53"></script>
+{% endblock %}
+{% block head %}
+<div id="left-sidebar">
+    <h3 id="sidebar-header"><img src="media/images/wheel_3.png" class="header-icon"/>Thông Tin</h3>
+    <ul id="main-menu">
+        <li class="dropdown"><a href="#">Giới Thiệu</a>
+            <!--{% if gioi_thieu_data %}-->
+            <ul class="sub-menu">
+                <!--{% for data in gioi_thieu_data %}-->
+                <li><a href="/thongtin/gioithieu/{{ data.url_tag }}">{{ data.title }}</a></li>
+                <!--{% endfor %}-->
+            </ul>
+             <!--{% endif %}-->
+        </li>
+        <li><a href="/thongtin/tonchi">Tôn Chỉ</a></li>
+        <li class="dropdown"><a href="#">Thông Báo</a>
+            <!--{% if thong_bao_data %}-->
+            <ul class="sub-menu">
+                <!--{% for data in thong_bao_data %}-->
+                <li><a href="/thongtin/thongbao/{{ data.url_tag }}">{{ data.title }}</a></li>
+                <!--{% endfor %}-->
+            </ul>
+             <!--{% endif %}-->
+        </li>
+        <li><a href="#">Lịch Sinh Hoạt</a></li>
+    </ul>
+</div> <!-- end #left-side -->
+{% endblock %}
+
+{% block body_block %}{% endblock %}
