@@ -5,15 +5,21 @@ from django.views.generic.base import RedirectView
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'baophuoc.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-    url(r'^admin/', include(admin.site.urls)),
+urlpatterns = patterns('',    
+    # apps
     url(r'trangchu/', include('trangchu.urls')),
+    url(r'^thongtin/', include('thongtin.urls')), # connect to urls.py in app
+    url(r'^phathoc/', include('phathoc.urls')),
+    url(r'^phapam/', include('phapam.urls')),
+    url(r'^thuvien/', include('thuvien.urls')),
+    
+    # plugins
+    url(r'session_security/', include('session_security.urls')),  # session_security
+    url(r'^ckeditor/', include('ckeditor.urls')),
+    
+    # others
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', RedirectView.as_view(url='trangchu/',permanent=False), name='index'), # redirect to /trangchu/
-    url(r'^thongtin/', include('thongtin.urls')), # connect to urls.py in rango app
-    (r'^ckeditor/', include('ckeditor.urls')),  
 )
 
 if settings.DEBUG:

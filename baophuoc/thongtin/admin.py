@@ -1,12 +1,12 @@
 from django.contrib import admin
-from thongtin.models import Category, Content
+from thongtin.models import *
 
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['name']
+class ThongtinCategoryAdmin(admin.ModelAdmin):
+    list_display = ['name', 'tag']
 
-class ContentAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category', 'date', 'display')
+class ThongtinDBAdmin(admin.ModelAdmin):
+    list_display = ('title', 'category', 'date', 'display', 'url_tag', 'views')
 
 # Register your models here.
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Content, ContentAdmin)
+admin.site.register(ThongtinCategory, ThongtinCategoryAdmin)
+admin.site.register(ThongtinDB, ThongtinDBAdmin)

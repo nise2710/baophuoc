@@ -1,0 +1,34 @@
+{% extends 'phapam/phapam_base.html' %}
+{% block title %}{% if cat %}{{ cat.name }}{% endif %} |{% endblock %}
+{% block body_block %}
+<div class="main-content">   
+    <div class="content-header"><a href=""><h3><img src="media/images/wheel_3.png" class="header-icon"/>{% if cat %}{{ cat.name }}{% endif %}</h3></a></div>
+    <h3 class="content-title"><img src="media/images/chuyen_phap_luan.png" class="content-banner"/></h3>
+    <hr class="seperator">
+    <!--{% if contents %}-->
+    <table class="title-list">
+        <tr><th>Tiêu đề</th><th>Tác giả</th><th>Ngày đăng</th><th>Lượt xem</th></tr>
+        <!--{% for content in contents %}-->
+        <tr>
+            <td class="title-column"><a href="{{ content.category.tag }}/{{ content.url_tag }}">{{ content.title }}</a></td>
+            <td class="author-column">{{ content.author }}</td>
+            <td class="date-column">{{ content.date|date:"d - m - Y" }}</td>
+            <td class="views-column">{{ content.views }}</td>
+        </tr>
+        <!--{% endfor %}-->
+    </table>
+    {% include 'paginator.html' %}
+    <!--{% else %}-->
+    <p class="content-missing">Chưa có bài viết</p>
+    <!--{% endif %}-->
+
+    <div class="content-icon"></div>
+     <hr class="seperator">
+    <div class="to-top"><a href="#"><img src="media/images/top_arrow.png" />Đầu Trang</a></div>
+    <div class="content-footer">
+        <div class="posted-date"></div>
+        <div class="views"></div>
+        {% include './share_small_btn.html' %}
+    </div>
+</div><!-- end .main-content -->
+{% endblock %}

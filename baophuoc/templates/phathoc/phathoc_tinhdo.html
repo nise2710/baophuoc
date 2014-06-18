@@ -1,0 +1,20 @@
+{% extends 'phathoc/phathoc_base.html' %}
+{% block title %}Tịnh Độ |{% endblock %}
+{% block body_block %}
+<!--{% if contents %}-->
+<div class="main-content">   
+    <div class="content-header"><a href=""><h3><img src="media/images/wheel_3.png" class="header-icon"/>Tịnh Độ</h3></a></div>
+    <h3 class="content-title"><img src="media/images/lotus_2.png" class="content-title-icon"/>{{ contents.title }}</h3>
+    <hr class="seperator">
+    <div class="content">{{ contents.content|safe }}</div>
+    <div class="content-icon"></div>
+    <hr class="seperator">
+    <div class="to-top"><a href="#"><img src="media/images/top_arrow.png" />Đầu Trang</a></div>
+    <div class="content-footer">
+        <div class="posted-date">Posted on {{ contents.date|date:"l, M d, Y" }}&nbsp;|&nbsp;</div>
+        <div class="views">Views: {{ contents.views }}&nbsp;|&nbsp;</div>
+        {% include './share_small_btn.html' %}
+    </div>
+</div>
+<!--{% endif %}-->
+{% endblock %}

@@ -1,81 +1,59 @@
 /* base.css */
 /* Copyright 2014 by DTT - Bao Phuoc Temple */
 /* reset */
+@import url('navigation.css');
+@import url('sidebar.css');
+@import url('content.css');
+@import url('index_page.css');
+@import url('gallery.css');
+@import url('home.css');
+@import url('thongtin.css');
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
-    background-color: #FFE9A6;
-    color: #A42D00;
+    background-color: #FCFCFC;
+    color: #1A1A1A;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
 }
 
+a {
+    color: #1A1A1A;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #DF0E0E;
+    text-decoration: underline;
+}
+
+li.bullet {
+    background: url("../../media/images/bullet.png") no-repeat 7px;
+    background-size: 12px 12px;
+    display: block;
+}
+
 #container {
+    border-left: 1px solid #E5E5E5;
+    border-right: 1px solid #E5E5E5;
     margin: 0 auto;
+    padding: 1px;
     width: 1000px;
 }
 
 #banner h1 {
-    background: url("../../media/images/baophuoc_banner_2.png") no-repeat;
+    background: url("../../media/images/baophuoc_banner_3.png") no-repeat;
+    border-radius: 5px;
     text-indent: -9999px;
     height: 150px;
     width: 1000px;
 }
 
-#nav {
-    background: url("../../media/images/nav_background.png") repeat-x;
-    /*background-color: #FFA230;*/
-    border-top: 2px solid #DD8000;
-    border-bottom: 2px solid #DD8000;
-    height: 48px;
-    width: 1000px;
-}
-
-#nav ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 15px 0;
-}
-
-#nav ul li {
-    display: inline;
-    padding: 5px 15px 6px 15px;
-    margin: 0 -5px 0 -5px;
-}
-/*
-#nav ul li:not(:last-child) {
-    border-right: 2px solid #DD8000;
-}
-*/
-#nav ul li a {
-    color: #FF4300;
-    font-size: 11pt;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-#nav ul li:hover {
-    background: url("../../media/images/nav_background2_hover_1.png") repeat-x;
-    background-color: #FFB733; 
-    border-radius: 3px;
-    padding: 10px 15px 10px 15px;
-}
-/*                                          
-#nav ul li:hover:last-child {
-    padding-left: 13px;
-    padding-right: 13px;
-}
-*/
-#nav ul li:hover a {
-    color: #B73200;
-    text-decoration: underline;
-}
-
 #primary {
-    margin-top: 0;
+    margin-top: 1px;
 }
 
 .header-icon {
@@ -83,46 +61,40 @@ body {
     padding: 0 3px;
 }
 
-.share {
-    padding: 10px 5px;
-    float: right;
-}
-
-#share-btn {
-    display: inline;
-}
-
-.share-text {
-    font-size: 11pt;
-    font-weight: bold;
-    float: left;
-    padding-right: 2px;
-}
-
 #footer {
+    border-radius: 5px;
     clear: both;
+    margin-top: auto;
+    padding-top: 1px;
 }
 
 #footer .footer-content {
     background: url("../../media/images/baophuoc_footer.png") repeat-x;
     border-top: 1px solid #DD8000; 
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     height: 154px;
     width: 1000px;
 }
 
 .contact {
     border-right: 1px dotted #DFA800;
+    border-top-left-radius: 5px;
     width: 230px;
+    float: left;
 }
 
 .contact .contact-header {
     background: url("../../media/images/nav_background.png") repeat-x;
     border-bottom: 1px solid #DD8000; 
+    border-top-left-radius: 5px;
     text-align: center;
     height: 43px; width: 230px;
 }
 
-.contact .contact-header h3 {
+.contact .contact-header h3,
+.google-navigation-header h3 {
     color: #EC4100;
     font-size: 15pt;
     padding: 8px;
@@ -151,9 +123,78 @@ body {
     font-weight: bold;
 }
 
+.google-navigation {
+    border-right: 1px dotted #DFA800;
+    float: left;
+    height: 154px;
+    width: 300px;
+}
+
+.google-navigation-header {
+    background: url("../../media/images/nav_background.png") repeat-x;
+    border-bottom: 1px solid #DD8000; 
+    text-align: center;
+    height: 43px; width: 300px;
+}
+
+.google-navigation table {
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.google-navigation-form td {
+    border: none;
+    padding: 2px;
+}
+
+.google-navigation-form-header {
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.google-navigation-input {
+    background-color: #F7F7F7;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding: 5px;
+    height: 15px;
+    width: 230px;
+}
+
+.google-navigation-submit {
+    float: right;
+    padding: 5px;
+}
+
+.footer-menu {
+    float: left;
+    font-size: 9pt;
+    font-weight: bold;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.footer-menu ul li {
+    padding: 0 0 5px 0;
+    margin-left: 5px;
+}
+
+.footer-menu ul li a {
+    color: #A93602;
+    margin-left: -5px;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    text-decoration: underline;
+}
+
 #footer .copyright {
     background: url("../../media/images/nav_background.png") repeat-x;
     border-top: 2px solid #DD8000; 
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     font-size: 10pt;
     padding: 10px;
     text-align: center;

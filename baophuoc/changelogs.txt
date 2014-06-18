@@ -21,3 +21,4 @@ BAO PHUOC WEBSITE CHANGELOG
     - Retrieve and display content in the thongbao page
     - Change from 'Tiểu Sử' to 'Giới Thiệu'
     
+        <!-- {% include 'session_security/all.html' %} -->

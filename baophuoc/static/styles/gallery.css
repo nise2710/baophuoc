@@ -1,0 +1,21 @@
+.gallery {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.gallery-margin-fixed {
+    margin-left: 15px;
+}
+
+.thumbnail {
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px #000000;
+    margin: 5px;
+    height: 100px;
+    width: 150px;
+}
+
+.thumbnail:hover {
+    border-color: #DE0D0D;
+}

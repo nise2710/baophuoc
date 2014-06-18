@@ -1,0 +1,43 @@
+{% extends 'thuvien/thuvien_base.html' %}
+{% block title %}{% if cat %}{{ cat.name }}{% endif %} |{% endblock %}
+{% block body_block %}
+<div class="main-content">   
+    <div class="content-header"><a href=""><h3><img src="media/images/wheel_3.png" class="header-icon"/>{% if cat %}{{ cat.name }}{% endif %}</h3></a></div>
+    <h3 class="content-title"><img src="media/images/phat_niet_ban.png" class="content-banner"/></h3>
+    <hr class="seperator">
+    <!--{% if contents %}-->
+    <div class="album">
+        <!--{% for content in contents %}-->
+        <div class="album-item">
+            <a href="/thuvien/hinhanh/{{ content.url_tag }}">
+                <!--{% if content.thumbnail != '' %}-->
+                    <img src="{{ content.thumbnail }}" class="thumbnail" />
+                <!--{% else  %}-->
+                    <img src="media/images/default_thumbnail.png" class="thumbnail" />
+                <!--{% endif %}-->
+            </a>
+            <div class="album-title"><a href="/thuvien/hinhanh/{{ content.url_tag }}">{{ content.title }}</a></div>
+            <script>
+                $('.thumbnail').tooltipster({
+                    theme: 'tooltipster-light',
+                    contentAsHTML: true
+		});
+            </script>
+        </div>
+        <!--{% endfor %}-->
+    </div>
+    {% include 'paginator.html' %}
+    <!--{% else %}-->
+    <p class="content-missing">Chưa có bài viết</p>
+    <!--{% endif %}-->
+
+    <div class="content-icon"></div>
+     <hr class="seperator">
+    <div class="to-top"><a href="#"><img src="media/images/top_arrow.png" />Đầu Trang</a></div>
+    <div class="content-footer">
+        <div class="posted-date"></div>
+        <div class="views"></div>
+        {% include './share_small_btn.html' %}
+    </div>
+</div><!-- end .main-content -->
+{% endblock %}

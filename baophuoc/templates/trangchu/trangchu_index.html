@@ -1,2 +1,173 @@
 {% extends 'base.html' %}
 {% block title %}Trang Chủ{% endblock %}
+{% block body_block %}
+<div class="main-content">
+    <div class="main-slider">
+        <!--{% if slide_photo_url %}-->
+        <ul class="bjqs">
+            <!--{% for photo in slide_photo_url %}-->
+            <li><img src="{{ photo.url }}" /></li>
+            <!--{% endfor %}-->
+        </ul>
+        <!--{% endif %}-->
+    </div>
+</div> 
+
+<div class="main-content">
+    <div class="notice">
+        <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Tin Tức Phật Sự</h3></div>
+        <div class="notice-content">
+            <div class="notice-text">
+                <!--{% if notice_text %}-->
+                <div class="overflow">
+                <table border="0">
+                    <tr><th class="notice-text-header">THÔNG BÁO</th></tr>
+                    <!--{% for text in notice_text %}-->
+                    <tr><td class="notice-text-title">{{ text.title }}</td></tr>
+                    <tr><td class="notice-text-content">{{ text.content|safe }}</td></tr>
+                    <!--{% endfor %}-->
+                </table>
+                </div>
+                <!--{% endif %}-->
+            </div>
+            <div class="notice-links">
+                <!--{% if notice_links %}-->
+                <ul class="notice-links-ul">
+                    <!--{% for link in notice_links %}-->
+                    <li class="notice-links-li bullet"><a href="{{ link.page_url }}">{{ link.title }}</a></li>
+                    <!--{% endfor %}-->
+                </ul>
+                <!--{% endif %}-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+    <div class="phathoc">
+        <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Phật Học</h3></div>
+        <div class="phathoc-canban">
+            <div class="phathoc-header"><h3>Phật Học Căn Bản</h3></div>
+            <!--{% if phathoc_canban %}-->
+            <ul class="phathoc-canban-ul">
+                <!--{% for data in phathoc_canban %}-->
+                <li class="bullet"><a href="/phathoc/{{ data.category.tag }}/{{ data.url_tag }}">{{ data.title }}</a></li>
+                <!--{% endfor %}-->
+            </ul>
+            <!--{% else %} -->
+            <p>Chưa có bài viết</p>
+            <!--{% endif %}-->
+        </div>
+        
+        <div class="phathoc-chuyensau">
+            <div class="phathoc-header"><h3>Phật Học Chuyên Sâu</h3></div>
+            <!--{% if phathoc_chuyensau %}-->
+            <ul class="phathoc-chuyensau-ul">
+                <!--{% for data in phathoc_chuyensau %}-->
+                <li class="bullet"><a href="/phathoc/{{ data.category.tag }}/{{ data.url_tag }}">{{ data.title }}</a></li>
+                <!--{% endfor %}-->
+            </ul>
+            <!--{% else %} -->
+            <p>Chưa có bài viết</p>
+            <!--{% endif %}-->
+        </div>
+        
+        <div class="phathoc-treem">
+            <div class="phathoc-header"><h3>Phật Học Cho Trẻ Em</h3></div>
+            <!--{% if phathoc_treem %}-->
+            <ul class="phathoc-treem-ul">
+                <!--{% for data in phathoc_treem %}-->
+                <li class="bullet"><a href="/phathoc/{{ data.category.tag }}/{{ data.url_tag }}">{{ data.title }}</a></li>
+                <!--{% endfor %}-->
+            </ul>
+            <!--{% else %} -->
+            <p>Chưa có bài viết</p>
+            <!--{% endif %}-->
+        </div>
+    </div>
+</div> 
+
+<div class="main-content">
+    <div class="phapam">
+        <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Pháp Âm</h3></div>
+        <div class="phapam-hangngay">
+            <div class="phapam-header"><h3>Pháp Thoại Hằng Ngày</h3></div>
+            <!--{% if phapthoai_hangngay %}-->
+            <div class="overflow">
+                <ul>
+                    <!--{% for data in phapthoai_hangngay %}-->
+                    <li class="bullet"><a href="/phapam/{{ data.category.tag }}/{{ data.url_tag }}">{{ data.title }}</a></li>
+                    <!--{% endfor %}-->
+                </ul>
+            </div>
+            <!--{% else %} -->
+            <p>Chưa có bài viết</p>
+            <!--{% endif %}-->
+        </div>
+        
+        <div class="phapam-batquantrai">
+            <div class="phapam-header"><h3>Các Khóa Tu Học</h3></div>
+            <!--{% if phapthoai_batquantrai %}-->
+            <div class="overflow">
+                <ul>
+                    <!--{% for data in phapthoai_batquantrai %}-->
+                    <li class="bullet"><a href="/phapam/{{ data.category.tag }}/{{ data.url_tag }}">{{ data.title }}</a></li>
+                    <!--{% endfor %}-->
+                </ul>
+            </div>
+            <!--{% else %} -->
+            <p>Chưa có bài viết</p>
+            <!--{% endif %}-->
+        </div>
+    </div>
+</div> 
+
+<div class="main-content">
+    <div class="thuvien">
+        <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Thư Viện</h3></div>
+        <div class="thuvien-hinhanh">
+            <div class="thuvien-header"><h3>Thư Viện Hình Ảnh</h3></div>
+            <!--{% if thuvien_hinhanh %}-->
+            <div class="overflow">
+                <ul>
+                    <!--{% for data in thuvien_hinhanh %}-->
+                    <li class="bullet"><a href="/thuvien/{{ data.category.tag }}/{{ data.url_tag }}">{{ data.title }}</a></li>
+                    <!--{% endfor %}-->
+                </ul>
+            </div>
+            <!--{% else %} -->
+            <p>Chưa có bài viết</p>
+            <!--{% endif %}-->
+        </div>
+        
+        <div class="thuvien-video">
+            <div class="thuvien-header"><h3>Thư Viện Video</h3></div>
+            <!--{% if thuvien_video %}-->
+            <div class="overflow">
+                <ul>
+                    <!--{% for data in thuvien_video %}-->
+                    <li class="bullet"><a href="/thuvien/{{ data.category.tag }}/{{ data.url_tag }}">{{ data.title }}</a></li>
+                    <!--{% endfor %}-->
+                </ul>
+            </div>
+            <!--{% else %} -->
+            <p>Chưa có bài viết</p>
+            <!--{% endif %}-->
+        </div>
+    </div>
+</div> 
+<script>
+$(document).ready(function () {   
+    $('.main-slider').bjqs({
+        height: 300,
+        width: 743,
+        animduration: 1000,
+        animtype : 'fade',
+        responsive: true,
+        showcontrols: false,
+        showmarkers: false,
+        randomstart : true
+    });
+});
+</script>
+{% endblock %}

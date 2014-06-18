@@ -1,0 +1,23 @@
+<div class="paginator">
+    <ul class="paginator-nav">
+        <!--{% if contents.has_previous %}-->
+        <li class="previous"><a href="?page={{ contents.previous_page_number }}">Quay lại</a></li>
+        <!--{% else %}-->
+        <li class="disabled">Quạy lại</li>
+        <!--{% endif %}-->
+       
+        <!--{% for n in contents.paginator.page_range %}-->
+        <!--{% if n == contents.number %}-->
+        <li class="current">{{ n }}</li>
+        <!--{% else  %}-->
+        <li class="page-list"><a href="?page={{ n }}">{{ n }}</a></li>
+        <!--{% endif %}-->
+        <!--{% endfor %}-->
+        
+        <!--{% if contents.has_next %}-->
+        <li><a href="?page={{ contents.next_page_number }}">Tiếp tục</a></li>
+        <!--{% else %}-->
+        <li class="disabled">Tiếp tục</li>
+        <!--{% endif %}-->
+    </ul> <!-- end .paginator-nav -->
+</div> <!-- end .paginator -->

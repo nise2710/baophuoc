@@ -1,0 +1,38 @@
+{% extends 'thongtin/thongtin_base.html' %}
+{% block title %}Giới Thiệu |{% endblock %}
+{% block body_block %}
+<div class="main-content">   
+    <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Giới Thiệu</h3></div>
+    <!--{% if thongtin_gioithieu_data %}-->
+    <div class="gioithieu-chuabaophuoc">
+        <!--{% for data in thongtin_gioithieu_data %}-->
+        <div class="gioithieu-chuabaophuoc-thumbnail"><img src="{{ data.thumbnail }}" class="gioithieu-thumbnail" /></div>
+        <div class="gioithieu-chuabaophuoc-link">
+            <a href="gioithieu/{{ data.url_tag }}">{{ data.title }}</a>
+        </div>
+        <!--{% endfor %}-->
+    </div>
+    <!--{% endif %}-->
+    <hr class="seperator">
+    <!--{% if thongtin_tosu_data %}-->
+    <div class="gioithieu-tosu">
+        <div class="gioithieu-tosu-header"><h2>Tổ Sư</h2></div>
+        <!--{% for data in thongtin_tosu_data %}-->
+        <div class="tosu">
+        <div class="gioithieu-tosu-thumbnail"><img src="{{ data.thumbnail }}" class="tosu-thumbnail" /></div>
+        <div class="gioithieu-tosu-link">
+            <a href="gioithieu/{{ data.url_tag }}">{{ data.title }}</a>
+        </div>
+        </div>
+        <!--{% endfor %}-->
+    </div>
+    <!--{% endif %}-->
+    <hr class="seperator">
+    <div class="to-top"><a href="#"><img src="media/images/top_arrow.png" />Đầu Trang</a></div>
+    <div class="content-footer">
+        <div class="posted-date"></div>
+        <div class="views"></div>
+        {% include './share_small_btn.html' %}
+    </div>
+</div><!-- end .main-content -->
+{% endblock %}

@@ -1,60 +1,82 @@
 /* thongtin-sidebar.css */
-#left-sidebar {
-    background-color: #FFCC33;
-    border: 1px solid #DD8000;
-    border-top: none;
-    float: left;
-    width: 200px;
+#right-sidebar {
+    background-color: #F7F7F7;
+    border: 1px solid #D8D8D8;
+    border-bottom: none;
+    border-radius: 5px;
+    float: right;
+    margin-top: 1px;
+    width: 250px;
 }
 
-#left-sidebar h3#sidebar-header {
+#right-sidebar .sidebar-container {
+    margin-bottom: 1px;
+}
+
+#right-sidebar h3.sidebar-header {
     background: url("../../media/images/nav_background.png") repeat-x;
-    /* background-color: #FFA630; */
-    border-bottom: 1px solid #DD8000;
-    border-top: none;
+    border: 1px solid #DD8000;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     color: #EC4100;
     text-align: center;
     text-shadow: 1px 1px #000000;
     padding: 10px 0;
+    margin-left: -1px;
+    width: 250px;
 }
 
-#left-sidebar ul {
+#right-sidebar #top-news {
+    border-bottom: 1px solid #D8D8D8;
+    height: 100%;
+}
+
+#right-sidebar h3#thongtin-moichapnhat {
+    margin-top: 100px;
+}
+
+#right-sidebar #top-news ul  {
     list-style-type: none;
-    text-align: center;
+    height: 150px !important;
+    overflow: hidden;
 }
 
-#left-sidebar ul li {
-    padding: 10px 0;
-    position: relative;
+#right-sidebar #top-news ul li,
+#right-sidebar #new-update ul li,
+#right-sidebar #lienket ul li {
+    border-bottom: 1px dotted #CDCDCD;
+    color: #1A1A1A;
+    padding: 5px 0 5px 35px;
 }
 
-#left-sidebar ul li:not(:last-child) {
-    border-bottom: 1px dotted #DFA800;
+#right-sidebar #top-news ul li:hover,
+#right-sidebar #new-update ul li:hover,
+#right-sidebar #lienket ul li:hover {
+    background-color: #EBEBEB;
 }
 
-#left-sidebar ul li:hover {
-    background-color: #FFC106;
-}
-
-#left-sidebar ul li a, #main-menu li ul.sub-menu li a  {
-    color: #FF4300;
-    font-weight: bold;
+#right-sidebar #top-news ul li a, 
+#right-sidebar #new-update ul li a,
+#right-sidebar #lienket ul li a {
+    color: #1A1A1A;
+    font-size: 9pt;
+    font-weight: normal;
+    margin-left: -10px;
     text-decoration: none;
 }
 
-/* submenu */
-ul.sub-menu {
-	background-color: #FFCC33;
-	border: 1px solid #DD8000;
-	display: none;
-	left: 200px;
-	top: -1px;
-	position: absolute;
-	width: 100%
+#right-sidebar #top-news ul li:hover,
+#right-sidebar #top-news ul li a:hover,
+#right-sidebar #new-update ul li:hover,
+#right-sidebar #new-update ul li a:hover,
+#right-sidebar #lienket ul li:hover, 
+#right-sidebar #lienket ul li a:hover {
+    color: #DE0E0E;
+    text-decoration: underline;
 }
 
-ul.sub-menu li a,
-ul.sub-menu li a:active,
-ul.sub-menu li a:link {
-	display: block;
+#right-sidebar #new-update {
+    border-bottom: 1px solid #D8D8D8;
+    height: auto;
 }

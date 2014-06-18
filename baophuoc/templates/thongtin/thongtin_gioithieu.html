@@ -1,14 +1,20 @@
 {% extends 'thongtin/thongtin_base.html' %}
-{% block title %}Giới Thiệu{% endblock %}
+{% block title %}{% if content %}{{ content.title }}{% endif %} |{% endblock %}
 {% block body_block %}
-<!--{% if gioithieu %}-->
-<div id="main-content">   
+<!--{% if content %}-->
+<div class="main-content">   
     <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Giới Thiệu</h3></div>
-    <h3 class="content-title"><img src="media/images/lotus_2.png" class="content-title-icon"/>{{ gioithieu.title }}</h3>
+    <h3 class="content-title"><img src="media/images/lotus_2.png" class="content-title-icon"/>{{ content.title }}</h3>
     <hr class="seperator">
-    <div class="content">{{ gioithieu.content|safe }}</div>
+    <div class="content">{{ content.content|safe }}</div>
+    <div class="content-icon"></div>
     <hr class="seperator">
-    {% include './share_small_btn.html' %}
+    <div class="to-top"><a href="#"><img src="media/images/top_arrow.png" />Đầu Trang</a></div>
+    <div class="content-footer">
+        <div class="posted-date">Posted on {{ content.date|date:"l, M d, Y" }}&nbsp;|&nbsp;</div>
+        <div class="views">Views: {{ content.views }}&nbsp;|&nbsp;</div>
+        {% include './share_small_btn.html' %}
+    </div>
 </div>
 <!--{% endif %}-->
 {% endblock %}

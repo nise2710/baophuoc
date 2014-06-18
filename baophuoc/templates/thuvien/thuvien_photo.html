@@ -1,0 +1,61 @@
+{% extends 'thuvien/thuvien_base.html' %}
+{% block title %}Hình Ảnh |{% endblock %}
+{% block body_block %}
+<!--{% if content %}-->
+<div class="main-content">   
+    <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Hình Ảnh</h3></div>
+    <h3 class="content-title"><img src="media/images/lotus_2.png" class="content-title-icon"/>{{ content.title }}<span class="author">- {{ content.author }}</span></h3>
+    <hr class="seperator">
+    <div class="content">
+        <div class="gallery">
+            <div class="gallery-margin-fixed">
+                <!--{% for photo in photo_url  %}-->
+                <a href="{{ photo.url }}" rel="prettyPhoto[gallery]" title="{{ photo.title }}">
+                    <img src="{{ photo.url }}" class="thumbnail" alt="{{ photo.title }}"/>
+                </a>
+                <!--{% endfor %}-->
+                <script>
+                $(document).ready(function () {
+                    $("a[rel^='prettyPhoto']").prettyPhoto({
+                        animation_speed: 'fast',
+                        autoplay_slideshow: true,
+                        slideshow: 4500,
+                        show_title: false,
+                        social_tools: false
+                    });
+                });
+                </script>
+            </div>
+        </div>
+        
+        <div class="relate-post">
+            <div class="relate-post-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Chủ đề khác</h3></div>
+            <div class="relate-post-content">
+                <!--{% if thuvien_data %}-->
+                <table class="title-list">
+                    <!--{% for data in thuvien_data %}-->
+                        <!--{% if data.id != content.id %}-->
+                        <tr>
+                            <td class="title-column"><a href="{{ data.url_tag }}">{{ data.title }}</a></td>
+                            <td class="author-column">{{ data.author }}</td>
+                            <td class="date-column">{{ data.date|date:"d - m - Y" }}</td>
+                            <td class="views-column">{{ data.views }}</td>
+                        </tr>
+                        <!--{% endif %}-->
+                    <!--{% endfor %}-->
+                </table>
+                <!--{% endif %}-->
+            </div>
+        </div>
+    </div>
+    
+    <hr class="seperator">
+    <div class="to-top"><a href="#"><img src="media/images/top_arrow.png" />Đầu Trang</a></div>
+    <div class="content-footer">
+        <div class="posted-date">Posted on {{ content.date|date:"l, M d, Y" }}&nbsp;|&nbsp;</div>
+        <div class="views">Views: {{ content.views }}&nbsp;|&nbsp;</div>
+        {% include './share_small_btn.html' %}
+    </div>
+</div>
+<!--{% endif %}-->
+{% endblock %}

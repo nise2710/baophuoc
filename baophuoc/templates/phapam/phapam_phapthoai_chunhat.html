@@ -1,0 +1,49 @@
+{% extends 'phapam/phapam_base.html' %}
+{% block title %}Pháp Thoại Ngày Chủ Nhật |{% endblock %}
+{% block body_block %}
+<!--{% if content %}-->
+<div class="main-content">   
+    <div class="content-header"><a href=""><h3><img src="media/images/wheel_3.png" class="header-icon"/>Pháp Thoại Ngày Chủ Nhật</h3></a></div>
+    <h3 class="content-title"><img src="media/images/lotus_2.png" class="content-title-icon"/>{{ content.title }}<span class="author">- {{ content.author }}</span></h3>
+    <hr class="seperator">
+    <div class="content">
+        <div id="jwPlayer">
+            <script type="text/javascript">
+                jwplayer("jwPlayer").setup({
+                    file:"{{ content.url }}",
+                    height: 320,
+                    width: 480,
+		});
+            </script>
+        </div>
+        <div class="relate-post">
+            <div class="relate-post-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Chủ đề khác</h3></div>
+            <div class="relate-post-content">
+                <!--{% if phapam_data %}-->
+                <table class="title-list">
+                    <!--{% for data in phapam_data %}-->
+                        <!--{% if data.id != content.id %}-->
+                        <tr>
+                            <td class="title-column"><a href="{{ data.url_tag }}">{{ data.title }}</a></td>
+                            <td class="author-column">{{ data.author }}</td>
+                            <td class="date-column">{{ data.date|date:"d - m - Y" }}</td>
+                            <td class="views-column">{{ data.views }}</td>
+                        </tr>
+                        <!--{% endif %}-->
+                    <!--{% endfor %}-->
+                </table>
+                <!--{% endif %}-->
+            </div>
+        </div>
+    </div>
+    
+    <hr class="seperator">
+    <div class="to-top"><a href="#"><img src="media/images/top_arrow.png" />Đầu Trang</a></div>
+    <div class="content-footer">
+        <div class="posted-date">Posted on {{ content.date|date:"l, M d, Y" }}&nbsp;|&nbsp;</div>
+        <div class="views">Views: {{ content.views }}&nbsp;|&nbsp;</div>
+        {% include './share_small_btn.html' %}
+    </div>
+</div>
+<!--{% endif %}-->
+{% endblock %}

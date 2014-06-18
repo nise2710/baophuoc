@@ -40,8 +40,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'session_security',
     'ckeditor',
+    'trangchu',
     'thongtin',
+    'phathoc',
+    'phapam',
+    'thuvien',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,6 +54,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'session_security.middleware.SessionSecurityMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -94,6 +100,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 TEMPLATE_DIRS = (
     TEMPLATE_PATH,
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    'django.core.context_processors.request',
 )
 
 '''

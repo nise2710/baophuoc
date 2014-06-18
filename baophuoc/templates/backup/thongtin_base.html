@@ -7,32 +7,63 @@
 <script src="static/scripts/thongtin/thongtin.js"></script>
 <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-538668bf7b256a53"></script>
+<script type="text/javascript" src="static/scripts/thongtin/jquery.marquee.min.js"></script>
 {% endblock %}
 {% block head %}
 <div id="left-sidebar">
-    <h3 id="sidebar-header"><img src="media/images/wheel_3.png" class="header-icon"/>Thông Tin</h3>
+    <div class="sidebar-container" id="thongtin">
+    <h3 class="sidebar-header"><img src="media/images/wheel_3.png" class="header-icon"/>Thông Tin</h3>
     <ul id="main-menu">
-        <li class="dropdown"><a href="#">Giới Thiệu</a>
+        <li class="dropdown"><a href="#" class="sub-menu-element-level-1">Giới Thiệu</a>
             <!--{% if gioi_thieu_data %}-->
             <ul class="sub-menu">
                 <!--{% for data in gioi_thieu_data %}-->
-                <li><a href="/thongtin/gioithieu/{{ data.url_tag }}">{{ data.title }}</a></li>
+                <li><a href="/thongtin/gt/{{ data.url_tag }}" class="sub-menu-element-level-2">{{ data.title }}</a></li>
                 <!--{% endfor %}-->
-            </ul>
+                <li class="dropdown-level-2"><a href="#" class="sub-menu-element-level-2">Tổ Sư</a>
+                    <!--{% if tieu_su_data %}-->
+                    <ul class="sub-menu-level-2">
+                        <!--{% for data in tieu_su_data %}-->
+                         <li><a href="/thongtin/ts/{{ data.url_tag }}" class="sub-menu-element-level-3">{{ data.title }}</a></li>
+                        <!--{% endfor %}-->
+                    </ul> <!-- end .sub-menu-level-2 -->
+                    <!--{% endif %}-->
+                </li>
+            </ul> <!-- end .sub-menu -->
              <!--{% endif %}-->
-        </li>
-        <li><a href="/thongtin/tonchi">Tôn Chỉ</a></li>
-        <li class="dropdown"><a href="#">Thông Báo</a>
+        </li> <!-- end gioithieu -->
+        <li><a href="/thongtin/tc/tonchi" class="sub-menu-element-level-1">Tôn Chỉ</a></li>
+        <li class="dropdown"><a href="#" class="sub-menu-element-level-1">Thông Báo</a>
             <!--{% if thong_bao_data %}-->
             <ul class="sub-menu">
                 <!--{% for data in thong_bao_data %}-->
-                <li><a href="/thongtin/thongbao/{{ data.url_tag }}">{{ data.title }}</a></li>
+                <li><a href="/thongtin/tb/{{ data.url_tag }}" class="sub-menu-element-level-2">{{ data.title }}</a></li>
                 <!--{% endfor %}-->
             </ul>
              <!--{% endif %}-->
         </li>
-        <li><a href="#">Lịch Sinh Hoạt</a></li>
+        <li class="dropdown"><a href="#" class="sub-menu-element-level-1">Sinh Hoạt</a>
+            <!--{% if sinh_hoat_data %}-->
+            <ul class="sub-menu">
+                <!--{% for data in sinh_hoat_data %}-->
+                <li><a href="/thongtin/sh/{{ data.url_tag }}" class="sub-menu-element-level-2">{{ data.title }}</a></li>
+                <!--{% endfor %}-->
+            </ul>
+             <!--{% endif %}-->
+        </li>
     </ul>
+    </div> <!-- end .sidebar-container -->
+    
+    <div class="sidebar-container" id="top-news">
+    <h3 class="sidebar-header"><img src="media/images/wheel_3.png" class="header-icon"/>Mới Cập Nhật</h3>
+    <!--{% if links %}-->
+    <ul class="top-news-content">
+        <!--{% for link in links %}-->
+        <li><a href="/thongtin/{{ link.category.tag }}/{{ link.url_tag }}">{{ link.title }}</a></li>       
+        <!--{% endfor %}-->
+    </ul>
+    <!--{% endif %}-->
+    </div> <!-- end .sidebar-container -->
 </div> <!-- end #left-side -->
 {% endblock %}
 

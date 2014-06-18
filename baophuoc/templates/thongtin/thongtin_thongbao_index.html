@@ -1,0 +1,35 @@
+{% extends 'thongtin/thongtin_base.html' %}
+{% block title %}Thông Báo |{% endblock %}
+{% block body_block %}
+<div class="main-content">   
+    <div class="content-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Thông Báo</h3></div>
+    <!--{% if contents %}-->
+    <div class="index-container">
+        <!--{% for content in contents %}-->
+        <div class="index-block-content">
+            <div class="index-thumbnail">
+                <a href="{{ content.category.tag }}/{{ content.url_tag }}"><img src="media/images/default_thumbnail.png" class="thumbnail"/></a>
+            </div>
+            <div class="index-content">
+                <div class="index-title"><a href="{{ content.category.tag }}/{{ content.url_tag }}"><h3>{{ content.title }}</h3></a></div>
+                <div class="index-summary">{{ content.content|safe|truncatewords:50 }}</div>
+                <div class="index-read-detail"><a href="{{ content.category.tag }}/{{ content.url_tag }}">Xem chi tiết</a></div>
+            </div>
+        </div>
+        <hr class="index-separetor">
+        <!--{% endfor %}-->
+    </div>
+    {% include 'paginator.html' %}
+    <!--{% else %}-->
+    <p class="content-missing">Chưa có bài viết</p>
+    <!--{% endif %}-->
+
+    <hr class="seperator">
+    <div class="to-top"><a href="#"><img src="media/images/top_arrow.png" />Đầu Trang</a></div>
+    <div class="content-footer">
+        <div class="posted-date"></div>
+        <div class="views"></div>
+        {% include './share_small_btn.html' %}
+    </div>
+</div><!-- end .main-content -->
+{% endblock %}

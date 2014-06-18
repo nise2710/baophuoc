@@ -1,35 +1,200 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}{% endblock %} - Chùa Bảo Phước</title>
+        <title>{% block title %}{% endblock %} Chùa Bảo Phước - San Jose, California USA</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="static/styles/base.css">
+        <link rel="stylesheet" href="static/scripts/bjqs/bjqs.css"/>
+        <link rel="stylesheet" href="static/scripts/prettyPhoto/css/prettyPhoto.css"/>
+        <link rel="stylesheet" href="static/scripts/tooltipster/tooltipster.css"/>
+        <link rel="stylesheet" href="static/scripts/tooltipster/tooltipster-light.css"/>
+        <link rel="stylesheet" href="static/styles/calendar.css"/>
+        <link rel="icon" type="image/png" href="media/images/favicon.png" />
         <script src="static/scripts/jquery.js"></script>
+        <script src="static/scripts/navigation.js"></script>
+        <script type="text/javascript" language="JavaScript" src="static/scripts/amlich-hnd.js"></script>
         <script src="static/scripts/base.js"></script>
-        {% block extra_head %}{% endblock %}
+        <script src="static/scripts/jquery.marquee.min.js"></script>
+        <script src="static/scripts/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+        <script src="static/scripts/bjqs/bjqs-1.3.min.js"></script>
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+        <script type="text/javascript" src="static/scripts/addthis_widget.js#pubid=ra-538668bf7b256a53"></script>
+        <script src="static/scripts/tooltipster/jquery.tooltipster.min.js"></script>
+        <script src="static/scripts/jwplayer/jwplayer.js"></script>
     </head>
     <body>
         <div id="left-column"></div>
         <!-- CONTAINER -->
         <div id="container">
             <!-- BANNER -->
-            <div id="banner"><h1></h1></div>
+            <div id="banner"><a href="/trangchu/" title="Chùa Bảo Phước - San Jose, California USA"><h1></h1></a></div>
         
             <!-- MAIN NAVIGATOR -->
+            <div id="nav-container">
             <div id="nav">
                 <ul>
-                    <li><a href="/trangchu/">TRANG CHỦ</a></li>
-                    <li><a href="/thongtin/">THÔNG TIN</a></li>
-                    <li><a href="#">PHẬT PHÁP</a></li>
-                    <li><a href="#">THƯ VIỆN</a></li>
-                    <li><a href="#">LIÊN KẾT</a></li>
+                    <li class="nav-main"><a href="/trangchu/" class="nav-link">TRANG CHỦ</a></li>
+                    <li class="nav-main nav-vertical-dropdown"><a href="/thongtin/gioithieu" class="nav-link">THÔNG TIN</a>
+                        <ul class="nav-vertical-dropdown-list">
+                            <li class="alone"><a href="/thongtin/gioithieu">Giới Thiệu</a></li>
+                            <li class="alone"><a href="/thongtin/thongbao">Thông Báo</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-main nav-vertical-dropdown"><a href="/phathoc/phathoccanban" class="nav-link">PHẬT HỌC</a>
+                        <ul class="nav-vertical-dropdown-list">
+                            <li class="alone"><a href="/phathoc/phathoccanban">Phật Học Căn Bản</a></li>
+                            <li class="alone"><a href="/phathoc/phathocchuyensau">Phật Học Chuyên Sâu</a></li>
+                            <li class="alone"><a href="/phathoc/phathocchotreem">Phật Học Cho Trẻ Em</a></li>
+                    <!--        <li class="alone"><a href="/phathoc/thienhoc">Thiền Học</a></li>
+                            <li class="alone"><a href="/phathoc/tinhdo">Tịnh Độ</a></li>
+                            <li class="alone"><a href="/phathoc/mattong">Mật Tông</a></li> -->
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-main nav-vertical-dropdown"><a href="/phapam/radio_chuabaophuoc" class="nav-link">PHÁP ÂM</a>
+                        <ul class="nav-vertical-dropdown-list">
+                            <li class="alone"><a href="/phapam/radio_chuabaophuoc">Radio Chùa Bảo Phước</a></li>
+                            <li class="alone"><a href="/phapam/phapthoai_hangngay">Pháp Thoại Hằng Ngày</a></li>
+                        <!--    <li class="alone"><a href="/phapam/phapthoai_chunhat">Pháp Thoại Ngày Chủ Nhật</a></li> -->
+                            <li class="alone"><a href="/phapam/phapthoai_batquantrai">Khóa Tu Bát Quan Trai</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-main nav-vertical-dropdown"><a href="/thuvien/hinhanh" class="nav-link">THƯ VIỆN</a>
+                        <ul class="nav-vertical-dropdown-list">
+                            <li class="alone"><a href="/thuvien/hinhanh">Hình Ảnh</a></li>
+                            <li class="alone"><a href="/thuvien/video">Video</a></li>
+                        </ul>
+                    </li>
+                    
                 </ul>
             </div> <!-- end #nav -->
-            
+            </div> <!-- end #nav-container -->
             <div id="primary">
+            
             <!-- sidebar -->
-            {% block head %}{% endblock %}
+            <div id="right-sidebar">
+                <div class="sidebar-container" id="radio-ads">
+                    <embed src="media/images/ads/radio.swf" quality="high" type="application/x-shockwave-flash" wmode="transparent" width="250" height="125" pluginspage="http://www.macromedia.com/go/getflashplayer" allowScriptAccess="always"></embed>
+                    <div class="listen-online">
+                        <a href="/phapam/radio_chuabaophuoc"><img src="media/images/radio_listen_online.png" /></a>
+                    </div>
+                </div> <!-- end .sidebar-container -->
+                
+                <div class="sidebar-container" id="top-news">
+                    <h3 class="sidebar-header"><img src="media/images/wheel_3.png" class="header-icon"/>Thông tin sinh hoạt</h3>
+                    <!--{% if links %}-->
+                    <ul class="top-news-content">
+                    <!--{% for link in links %}-->
+                        <li class="bullet"><a href="/thongtin/{{ link.category.tag }}/{{ link.url_tag }}">{{ link.title }}</a></li>       
+                    <!--{% endfor %}-->
+                    </ul>
+                <!--{% endif %}-->
+                </div> <!-- end .sidebar-container -->
+                
+                <div class="sidebar-container" id="new-update">
+                    <h3 class="sidebar-header"><img src="media/images/wheel_3.png" class="header-icon"/>Bài viết mới</h3>
+                    
+                    <ul class="update-content">
+                        <!--{% if thongtin_update %}-->
+                        <!--{% for update in thongtin_update %}-->
+                        <li class="bullet"><a href="/thongtin/{{ update.category.tag }}/{{ update.url_tag }}">{{ update.title }}</a></li>       
+                        <!--{% endfor %}-->
+                        <!--{% endif %}-->
+                        
+                        <!--{% if phathoc_update %}-->
+                        <!--{% for update in phathoc_update %}-->
+                        <li class="bullet"><a href="/phathoc/{{ update.category.tag }}/{{ update.url_tag }}">{{ update.title }}</a></li> 
+                        <!--{% endfor %}-->
+                        <!--{% endif %}-->
+                        
+                        <!--{% if phapam_update %}-->
+                        <!--{% for update in phapam_update %}-->
+                        <li class="bullet"><a href="/phapam/{{ update.category.tag }}/{{ update.url_tag }}">{{ update.title }}</a></li> 
+                        <!--{% endfor %}-->
+                        <!--{% endif %}-->
+                        
+                        <!--{% if thuvien_photo_update %}-->
+                        <!--{% for update in thuvien_photo_update %}-->
+                        <li class="bullet"><a href="/thuvien/{{ update.category.tag }}/{{ update.url_tag }}">{{ update.title }}</a></li> 
+                        <!--{% endfor %}-->
+                        <!--{% endif %}-->
+                        
+                        <!--{% if thuvien_video_update %}-->
+                        <!--{% for update in thuvien_video_update %}-->
+                        <li class="bullet"><a href="/thuvien/{{ update.category.tag }}/{{ update.url_tag }}">{{ update.title }}</a></li> 
+                        <!--{% endfor %}-->
+                        <!--{% endif %}-->
+                    </ul>
+                </div> <!-- end .sidebar-container -->
+                
+                <div class="sidebar-container" id="lienket">
+                    <h3 class="sidebar-header"><img src="media/images/wheel_3.png" class="header-icon"/>Liên kết</h3>
+                    
+                    <!--{% if lienket_links %}-->
+                    <ul class="lienket-content">
+                        <!--{% for link in lienket_links %}-->
+                        <li class="bullet"><a href="{{ link.url }}">{{ link.title }}</a></li>       
+                        <!--{% endfor %}-->
+                    </ul>
+                    <!--{% else %}-->
+                    <p>Chưa có liên kết</p>
+                    <!--{% endif %}-->
+                </div>
+                
+                <div class="sidebar-container" id="calendar">
+                    <h3 class="sidebar-header"><img src="media/images/wheel_3.png" class="header-icon"/>Lịch tu học</h3>
+                    <div class="calendar">
+                        
+                        <script language="JavaScript">
+                        <!--
+                        document.writeln(printSelectedMonth());
+                         -->
+                        </script>
+                        <!--{% if sukien_date %}-->
+                        <!--{% for data in sukien_date %}-->                        
+                        <script>                            
+                            function checkMonthAndYear(month, year) {
+                                var calendar_month_year = $('.tenthang').text().split('/');
+                                if(calendar_month_year[0] == month)
+                                    return true;
+                            }
+                            
+                            function checkDay(date, title) {
+                                $('.ngaythang, .homnay, .ngaySamHoi, .tet').each(function () {
+                                    var calendar_class = $(this).attr('class').split(' ');
+                                    var calendar_title = $(this).attr('title');
+                                    var calendar_dd = $(this).text();
+                                    if(calendar_dd != '&bnsp;') {
+                                        calendar_dd = calendar_dd.split(' ');
+                                    }
+                                    if(calendar_dd[0] == date) {
+                                        if(calendar_class[0] != 'homnay' && calendar_class[0] != 'ngaySamHoi' && calendar_class[0] != 'tet')
+                                            $(this).css('background-color', '#CEFFCE');
+                                        calendar_title += '<center><p><strong><i>'+title+'</i></strong></p></center>';
+                                        $(this).attr('title', calendar_title);
+                                    }
+                                });
+                            }
+                            
+                            $(document).ready(function () {
+                                var data = ('{{ data.date|date:"d/m/Y" }}').split('/');
+                                var date = parseInt(data[0]);
+                                var month = parseInt(data[1]);
+                                var year = parseInt(data[2]);
+                                var title = '{{ data.event_title }}';
+                                if(checkMonthAndYear(month, year))
+                                    checkDay(date, title);
+                            });
+                        </script>
+                        <!--{% endfor %}-->
+                        <!--{% endif %}-->
+                    </div>
+                </div> <!-- end .sidebar-container -->
+                
+            </div> <!-- end #left-side -->
             
             <!-- every content will be in here -->
             {% block body_block %}{% endblock %}
@@ -38,7 +203,6 @@
                 <div class="footer-content">
                     <div class="contact">
                         <div  class="contact-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Liên Lạc</h3></div>
-                        <hr class="seperator">
                         <ul>
                             <li><strong>Chùa Bảo Phước</strong></li>
                             <li>270 Senter Road</li>
@@ -48,6 +212,18 @@
                             <li>Homepage: <a href="www.baophuoc.org">www.baophuoc.org</a></li>
                         </ul>
                     </div><!-- end .contact -->
+                    <div class="google-navigation">
+                            <div  class="google-navigation-header"><h3><img src="media/images/wheel_3.png" class="header-icon"/>Bản Đồ</h3></div>
+                            <div class="google-navigation-form">
+                                <form action="http://maps.google.com/maps?hl=vi" method="get" target="_blank" id="google-navigation-form">
+                                    <table border="0">
+                                        <tr><td colspan="2" class="google-navigation-form-header">Vui lòng nhập địa chỉ của bạn:</td></tr>
+                                        <tr><td><input type="text" name="saddr" class="google-navigation-input" placeholder="123 Main Street, San Jose, CA 45678"/></td></tr>
+                                        <tr><td><input type="hidden" name="daddr" value="270 Senter Road, San Jose, CA" /><input type="submit" value="Dò Đường" class="google-navigation-submit"/></td></tr>
+                                    </table>
+                                </form>
+                            </div><!-- end .google-navigation-form -->
+                    </div><!-- end .google-navigation -->
                 </div> <!-- end .footer-content -->
                 <div class="copyright"><p></p></div>
             </div>
@@ -56,8 +232,13 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 var currentYear = (new Date).getFullYear();
-                var copyright = '&copy; '+currentYear+' Chùa Bảo Phước - Designed by DTT';
+                var copyright = '&copy; '+currentYear+' Chùa Bảo Phước - San Jose, California, United States';
                 $('.copyright p').html(copyright); 
+				
+		$('.tooltip').tooltipster({
+                    theme: 'tooltipster-light',
+                    contentAsHTML: true
+                });
             });
         </script>
     </body>

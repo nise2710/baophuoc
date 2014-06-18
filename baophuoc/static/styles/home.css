@@ -1,0 +1,139 @@
+.notice-content .notice-text {
+    border-right: 1px solid #E5E5E5;
+    float: left;
+}
+
+.notice-content .overflow {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 350px;
+}
+
+.notice-content .notice-text table {
+    border-collapse: collapse;
+    height: auto;
+    margin-top: 5px;
+    width: 400px;
+}
+
+.notice-content .notice-text table th {
+    border-bottom: 1px solid #FFC71C;
+}
+
+.notice-content .notice-text table .notice-text-header {
+    color: #A62E00;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.notice-content .notice-text table .notice-text-title {
+    color: #DF0E0E;
+    border-bottom: 1px dotted #CDCDCD;
+    font-size: 13pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+.notice-content .notice-text table .notice-text-content {
+    border-bottom: 2px solid #C1C1C1;
+    text-align: justify;
+}
+
+.notice-content .notice-text table .notice-text-content a,
+.notice-content .notice-text table .notice-text-content a:link,
+.notice-content .notice-text table .notice-text-content a:visited {
+    color: #FFC71C;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.notice-content .notice-links {
+    float: right;
+    width: 325px;
+}
+
+.notice-content .notice-links ul {
+    list-style-type: none;
+}
+
+.notice-content .notice-links ul li {
+    padding: 5px 0;
+    padding-left: 25px;
+    border-bottom: 1px dotted #CDCDCD;
+}
+
+.notice-content .notice-links ul li:hover {
+    background-color: #EBEBEB;
+}
+
+.notice-content .notice-links ul li a {
+    font-size: 10pt;
+    margin-left: 0px;
+}
+
+/* phathoc-section-style -+- phapam-section-style -+- thuvien-section-style */
+.phathoc-canban {
+    border-right: 1px solid #E5E5E5;
+    float: left;
+    width: 245px;
+}
+
+.phathoc-chuyensau {
+    border-right: 1px solid #E5E5E5;
+    float: left;
+    width: 245px;
+}
+
+.phathoc-treem {
+    float: left;
+    width: 250px;
+}
+
+.phapam-hangngay,
+.thuvien-hinhanh {
+    border-right: 1px solid #E5E5E5;
+    float: left;
+    width: 371px;
+}
+
+.phapam-batquantrai,
+.thuvien-video {
+    float: left;
+    width: 371px;
+}
+
+.phathoc-header,
+.phapam-header,
+.thuvien-header {
+    border-bottom: 1px solid #FFC71C;
+    color: #A62E00;
+    font-size: 11pt;
+    padding: 5px;
+    text-align: center;
+}
+
+.phathoc li,
+.phapam li,
+.thuvien li {
+    padding: 5px 0 5px 25px;
+    border-bottom: 1px dotted #CDCDCD;
+}
+
+.phathoc li:hover,
+.phapam li:hover,
+.thuvien li:hover {
+    background-color: #EBEBEB;
+}
+
+.phathoc li a,
+.phapam li a,
+.thuvien li a{
+    font-size: 10pt;
+}
+
+.phapam .overflow,
+.thuvien .overflow{
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}

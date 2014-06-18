@@ -1,0 +1,13 @@
+.calendar {
+    margin-top: 2px;
+    float: right;
+}
+.calendar table {
+    border-collapse: collapse;
+    width: 250px;
+}
+
+.calendar table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
